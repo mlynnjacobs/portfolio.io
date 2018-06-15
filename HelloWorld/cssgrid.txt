@@ -1,0 +1,20 @@
+flex (1D) and grid (2D)--layout comes to the browser!
+GRID--more properties in css (18 or so more)
+from container takes and makes a grid-based system--you can place content in grid.
+allows complex layouts without manipulating doc structure
+talk by Jason Wilson--examples on Codepen
+
+grid-template-columns: (fractional eg. 1fr 3 fr 1 fr)
+
+grid-gap: 15px
+
+grid-template-areas: "names  names  names"
+
+resources:
+http://jensimmons.com/
+https://rachelandrew.co.uk/
+http://cssgridgarden.com/ (play tutorial for grid!!)
+https://css-tricks.com/snippets/css/complete-guide-grid/
+
+
+mobile layouts->->->->desktop

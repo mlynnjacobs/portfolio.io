@@ -1,0 +1,68 @@
+html { 
+    height: 100%;
+    background: url(launchingbg.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+body {
+    height: 100%;
+}
+/* header {
+    height: 800px;
+} */
+.allcontent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.invite {
+    height: 60%;
+    position: relative;
+}
+
+.invite p {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+hr {
+    margin-left: 30%;
+    margin-right: 30%;
+    max-height: 2em;
+    border-style: solid;
+    border-width: 3px;
+    color: rgb(9, 75, 75);
+}
+
+.emaillink {
+    flex: 1;
+    margin: 0 auto;
+}
+
+.subscribe {
+    background-color: rgb(43, 150, 177); /* Aqua */
+    border: none;
+    border-radius: 12px;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: all 0.23s ease-in-out 0s;
+}   
+    
+.subscribe:hover {
+    background-color:rgb(15, 81, 90);
+}
+  

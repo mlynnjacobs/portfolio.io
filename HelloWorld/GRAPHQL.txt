@@ -1,0 +1,22 @@
+Kenia Valladarez @kaxcode
+REST and learn some GraphQL
+
+fomo--gatsby to GraphQL
+
+problem with REST is endpoint creep--ex: adding "sub ids" to get smaller bits of large objects, etc.
+
+GraphQL is new API standard
+its server exposes a single endpoint
+you give and get specific data
+client has power
+
+FB made REACT & GraphQL
+(REACT=state management)
+
+GraphQLHub.com--playground for learning GraphQL
+
+clients: relay (fb product) and Apollo (open source)
+
+works with Python!
+
+resolvers resolver functions

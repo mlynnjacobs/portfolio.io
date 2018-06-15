@@ -1,0 +1,144 @@
+.item1{
+    background:LightSkyBlue;
+    grid-area: header;
+}
+  
+.item2{
+    background:LightSalmon;
+    grid-area: img;
+}
+  
+.item3{
+    background:PaleTurquoise;
+    grid-area: content;
+}
+  
+.item4{
+    background:LightPink;
+    grid-area: links;
+}
+    
+.item5 {
+    background: PaleGreen;
+    grid-area: footer;
+}
+  
+.container {
+    font-family: Tahoma;
+    color: #656565;
+    font-size: 20px;
+    min-height: 300px;
+    width: 100%;
+    background: LightGray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.25fr 0.5fr 1fr 0.1fr;
+    grid-gap: 10px;
+    grid-template-areas: 
+      "header header header"
+      "img img links"
+      "content content links"
+      "footer footer footer";
+}
+  
+h1, h2 {
+    color: white;
+    font-family: Tahoma;
+    text-align: center;
+}
+  
+h1 {
+    font-size: 3em;
+}
+  
+h2 {
+    font-size: 1.5em;
+}
+  
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+  
+figcaption {
+    display: block;
+    text-align: center;
+    padding-top: 1em;
+    color: #656565;
+    font-size: 16px;
+    font-weight: bold;
+}
+  
+p a {
+    font-size: 15px;
+}
+
+#resources {
+    text-align: center;
+}
+  
+ul {
+    list-style: none;
+}
+  
+ul li {
+    display: inline-block;
+    margin-right: 10%;
+}
+  
+a:link {
+    text-decoration: none;
+    color: #656565;
+}
+  
+a:visited {
+    text-decoration: none;
+    color: #333333;
+}
+  
+a:hover {
+    text-decoration: underline;
+}
+  
+a:active {
+    text-decoration: underline;
+}
+  
+li img {
+    width: 100%;
+    margin-top: 0.5em;
+      
+}
+
+hr {
+    border: solid;
+    width: 90%
+}
+  
+footer {
+    background: #061D25;
+    padding: 10px 0;
+    text-align: center;
+}
+  
+footer a {
+    color: #70726F;
+    font-size: 20px;
+    padding: 10px;
+    border-right: 1px solid #70726F;
+    transition: all .5s ease;
+}
+
+footer a:first-child {
+    border-left: 1px solid #70726F;
+}
+
+footer a:hover {
+    color: white;
+}
