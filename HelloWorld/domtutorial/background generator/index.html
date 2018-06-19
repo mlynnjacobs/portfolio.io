@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gradient Background</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Amaranth|Montserrat" rel="stylesheet">
+</head>
+<body id="gradient">
+    <h1>Background Generator</h1>
+    <p>Click to choose first color and second color:</p><br>
+    <input type="color" name="color1" class="color1" value=#FFFFFF>
+    <input type="color" name="color2" class="color2" value="#0080FF">
+    <p>Choose the direction of the gradient:</p><br>
+    <select id="select">
+        <option value="to right">from left to right</option>
+        <option value="to right top">from bottom left to top right</option>
+        <option value="to right bottom">from top left to bottom right</option>
+        <option value="to left">from right to left</option>
+        <option value="to left top">from bottom right to top left</option>
+        <option value="to left bottom">from top right to bottom left</option>     
+        <option value="to bottom">from top to bottom</option>
+        <option value="to top">from bottom to top</option>     
+    </select>
+    <h2>Current CSS Background</h2>
+    <h3>linear-gradient(to right, rgb(255, 255, 255), rgb(0, 128, 255));</h3><br>
+    <button class="btn" id="btn">Select a random gradient!</button>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
