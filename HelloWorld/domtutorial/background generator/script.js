@@ -54,6 +54,7 @@ function assignRandom() {
     +")";
     color1.value = colorFirst;
     color2.value = colorSecond;
+    dropdown.value = direction;
     css.textContent = body.style.background + ";";
 }
 
