@@ -1,4 +1,4 @@
-https://jsonplaceholder.typicode.com/users
+
 export const robots = [
   {
     id: 1,

@@ -5,12 +5,12 @@
 // this tool as a npm package.
 
 const hex_lett = {A: 10, B: 11, C: 12, D: 13, E: 14, F: 15};
-const colors = [red,green,blue];
+// const colors = [red,green,blue];
 var rgb = [];
 var hex = [];
-var red = [];
-var green = [];
-var blue = [];
+// var red = [];
+// var green = [];
+// var blue = [];
 
 function mainConverter() { 
     var input = prompt("Enter your color code:");
@@ -30,24 +30,13 @@ function mainConverter() {
 // HEX to RBG Conversion:
 
 function hexSlicer(hex_num) {
-    red.push(hex_num.slice(0,1));
-    red.push(hex_num.slice(1,2));
-    green.push(hex_num.slice(2,3));
-    green.push(hex_num.slice(3,4));
-    blue.push(hex_num.slice(4,5));
-    blue.push(hex_num.slice(5,6));
+    let red = [hex_num.slice(0,1), hex_num.slice(1,2)];
+    let green = [hex_num.slice(2,3), hex_num.slice(3,4)];
+    let blue = [hex_num.slice(4,5), hex_num.slice(5,6)];
+    const colors = red.concat(green, blue);
+    return(colors);
 }
 
-// // hexSlicer with global red, green, blue inside
-// function hexSlicer(hex_num) {
-//     let red = [hex_num.slice(0,1)];
-//     red.push(hex_num.slice(1,2));
-//     let green = [hex_num.slice(2,3)];
-//     green.push(hex_num.slice(3,4));
-//     let blue = [hex_num.slice(4,5)];
-//     blue.push(hex_num.slice(5,6));
-//     return new Array (red,blue,green)
-// }
 
 function hexToDec(array) {
     for (key in hex_lett) {
