@@ -5,91 +5,80 @@
 // this tool as a npm package.
 
 const hex_lett = {A: 10, B: 11, C: 12, D: 13, E: 14, F: 15};
-// const colors = [red,green,blue];
-var rgb = [];
-var hex = [];
-// var red = [];
-// var green = [];
-// var blue = [];
 
-function mainConverter() { 
+function initializeConversion() { 
     var input = prompt("Enter your color code:");
     if (input.length === 6) {
         hexInput = input.toUpperCase();
         convertHex(hexInput);
-        // alert(rgb);
-        console.log(rgb);
-    }else{rgbInput = new Array(input.split(","));
+     
+    }else{
+        var rgbInput = input.split(",").map(Number);
         convertRgb(rgbInput);
-        hex = red.join("")+green.join("")+blue.join("");
-        // alert(hex);
-        console.log(hex);
     }
 }
 
 // HEX to RBG Conversion:
-
 function hexSlicer(hex_num) {
     let red = [hex_num.slice(0,1), hex_num.slice(1,2)];
     let green = [hex_num.slice(2,3), hex_num.slice(3,4)];
     let blue = [hex_num.slice(4,5), hex_num.slice(5,6)];
-    const colors = red.concat(green, blue);
+    let colors = red.concat(green, blue);
     return(colors);
 }
 
-
-function hexToDec(array) {
-    for (key in hex_lett) {
-        for (var i=0; i<2; i++) {
-            if (key === array[i]) {
-                array[i] = hex_lett[key];
-            }
+function hexToDec(hex_colors) {
+    let dec_colors = []
+    for (var i=0; i<6; i++) {
+        if (Object.keys(hex_lett).includes(hex_colors[i])) {
+            dec_colors.push(hex_lett[hex_colors[i]]);
+        }else{
+            dec_colors.push(Number(hex_colors[i]));
         }
-    } 
+    }return dec_colors;
 }
 
-function decToRGB(pair){
-    rgb.push(Number(pair[0])*16+Number(pair[1]));
+function decToRGB(dec_colors){
+    let rgb = [];
+    for (var i=0; i<5; i+=2){
+        rgb.push(Number(dec_colors[i])*16+Number(dec_colors[i+1]));
+    } return rgb;
 }
 
 function convertHex() {
-    hexSlicer(hexInput);
-    colors.forEach(function(value) {
-        hexToDec(value);
-        decToRGB(value);    
-    });
+    let colors = hexSlicer(hexInput);
+    let decimals = hexToDec(colors);
+    let result = decToRGB(decimals);    
+    console.log(result);
+    return result;
 }
 
-// convertHex();
-function rgbSlicer(rgb_num) {
-    red.push(rgb_num[0]);
-    green.push(rgb_num[1]);
-    blue.push(rgb_num[2]);
-}
-
-function rgbToDec(color) {
-    num = Number(color)
-    color.splice(0,1,(Math.floor(num/16)));
-    color.push(Math.floor(num%16));
+//Convert RGB to Hex
+function rgbToDec(rgbInput) {
+    rawNums = [];
+    for (var i = 0; i< 3; i++) {
+        num = Number(rgbInput[i])
+        rawNums.push(Math.floor(num/16));
+        rawNums.push(Math.floor(num%16));
+    };
+    return rawNums;
 }
 
 function decToHex(array) {
     for (var key in hex_lett) {
-        for (var i=0; i<2; i++) {
+        for (var i=0; i<6; i++) {
             if (hex_lett[key] === array[i]) {
                 array[i] = key;
             }
         }
-    } 
+    } return array.join("");
 }
 
 function convertRgb(rgbInput) {
-    rgbSlicer(rgbInput);
-    colors.forEach(function(value) {
-        rgbToDec(value);
-        decToHex(value);
-    });
+    let value = rgbToDec(rgbInput);
+    let result = decToHex(value);
+    console.log(result);
+    return result;
 }
 
-mainConverter();
-// convertRgb(["255","10","28"]);
+initializeConversion();
